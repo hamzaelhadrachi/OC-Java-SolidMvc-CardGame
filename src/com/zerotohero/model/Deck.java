@@ -25,7 +25,16 @@ public class Deck {
 			Collections.swap(cards, i, random.nextInt(cards.size()));
 		}
 	}
+	
+	public PlayingCard removeTopCard() {
+		return cards.remove(0);
+	}
+	
+	public void returnCardToDeck(PlayingCard pc) {
+		cards.add(pc);
+	}
 
-	
-	
+	public List<PlayingCard> getCards() {
+		return cards;
+	}
 }
